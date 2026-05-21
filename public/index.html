@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compass Ultra AI DevOps</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Compass Ultra</p>
+        <h1>AI DevOps Chatbot</h1>
+        <p class="lede">Ask release-readiness questions about risky flags, policy gates, snapshot diffs, runbooks, workflow payloads, and launch blockers.</p>
+      </div>
+      <a class="demo-link" href="https://www.compassultra.com/app?demo=true" target="_blank" rel="noreferrer">Open demo</a>
+    </section>
+
+    <section class="workspace">
+      <aside class="prompts" aria-label="Suggested prompts">
+        <button data-prompt="What should block this Compass Ultra release?">Release blockers</button>
+        <button data-prompt="Build me a rollback plan for a risky feature flag launch.">Rollback plan</button>
+        <button data-prompt="What should the GitHub, Jira, and Slack payloads include?">Workflow payloads</button>
+        <button data-prompt="How should CI gate the live demo before launch?">CI release gate</button>
+        <button data-prompt="Give me a launch readiness checklist.">Readiness checklist</button>
+      </aside>
+
+      <section class="chat-panel" aria-label="Chat">
+        <div id="messages" class="messages"></div>
+        <form id="chat-form" class="composer">
+          <textarea id="message-input" rows="3" placeholder="Ask the AI DevOps assistant..."></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
