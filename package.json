@@ -1,0 +1,13 @@
+{
+  "name": "compass-ultra-ai-devops",
+  "version": "1.0.0",
+  "description": "AI DevOps agent that tests Compass Ultra automatically",
+  "private": true,
+  "scripts": {
+    "test": "node tests/test-release-loop.js",
+    "test:headed": "HEADLESS=false node tests/test-release-loop.js"
+  },
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}
