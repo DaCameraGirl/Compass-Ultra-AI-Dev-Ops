@@ -1,0 +1,187 @@
+:root {
+  color-scheme: dark;
+  --bg: #090d18;
+  --panel: #101827;
+  --panel-2: #162033;
+  --line: #27354d;
+  --text: #f4f7fb;
+  --muted: #9aa7bd;
+  --green: #33d69f;
+  --blue: #569cff;
+  --yellow: #f7c455;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 20% 10%, rgba(86, 156, 255, 0.18), transparent 32%), var(--bg);
+  color: var(--text);
+}
+
+button, textarea { font: inherit; }
+
+.shell {
+  width: min(1120px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-end;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(34px, 6vw, 64px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.lede {
+  max-width: 680px;
+  margin: 18px 0 0;
+  color: #d6deeb;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.demo-link,
+.composer button,
+.prompts button {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  background: var(--panel-2);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.demo-link {
+  flex: 0 0 auto;
+  padding: 12px 16px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 18px;
+  min-height: 620px;
+}
+
+.prompts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prompts button {
+  padding: 14px;
+  text-align: left;
+  color: #dce5f3;
+}
+
+.prompts button:hover,
+.demo-link:hover,
+.composer button:hover {
+  border-color: var(--green);
+}
+
+.chat-panel {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 620px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(16, 24, 39, 0.88);
+  overflow: hidden;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  overflow: auto;
+}
+
+.message {
+  max-width: 78%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.message.assistant {
+  align-self: flex-start;
+  background: #162033;
+  border: 1px solid var(--line);
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #1d6eea;
+}
+
+.meta {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.composer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  padding: 16px;
+  border-top: 1px solid var(--line);
+  background: #0f1726;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 72px;
+  max-height: 180px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #0a1020;
+  color: var(--text);
+  outline: none;
+}
+
+textarea:focus { border-color: var(--blue); }
+
+.composer button {
+  width: 96px;
+  background: var(--green);
+  color: #061713;
+  font-weight: 800;
+}
+
+@media (max-width: 760px) {
+  .hero { display: block; }
+  .demo-link { display: inline-block; margin-top: 18px; }
+  .workspace { grid-template-columns: 1fr; }
+  .prompts { display: grid; grid-template-columns: 1fr; }
+  .message { max-width: 92%; }
+  .composer { grid-template-columns: 1fr; }
+  .composer button { width: 100%; height: 44px; }
+}
