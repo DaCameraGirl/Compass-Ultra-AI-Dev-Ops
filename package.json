@@ -1,9 +1,10 @@
 {
   "name": "compass-ultra-ai-devops",
   "version": "1.0.0",
-  "description": "AI DevOps agent that tests Compass Ultra automatically",
+  "description": "AI DevOps chatbot and release-loop test agent for Compass Ultra",
   "private": true,
   "scripts": {
+    "start": "node server.js",
     "test": "node tests/test-release-loop.js",
     "test:headed": "HEADLESS=false node tests/test-release-loop.js"
   },
