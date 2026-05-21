@@ -1,0 +1,52 @@
+name: AI DevOps Test - Compass Ultra
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Run AI DevOps test
+        run: npm test
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-devops-report
+          path: ai-devops-report.html
+          if-no-files-found: ignore
+
+      - name: Upload failure screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: risk-analysis-failure
+          path: risk-analysis-failure.png
+          if-no-files-found: ignore
+
+      - name: Upload downloaded PDF
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: downloaded-runbook
+          path: downloaded-runbook.pdf
+          if-no-files-found: ignore
