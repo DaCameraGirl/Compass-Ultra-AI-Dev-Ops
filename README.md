@@ -41,7 +41,7 @@
 </p>
 
 <p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
-<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=What%20this%20repo%20does&fontSize=22&fontColor=e6edf3" width="720" alt="What this repo does" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:070b14,100:12102a&height=50&section=header&text=What%20this%20repo%20does&fontSize=22&fontColor=e6edf3&animation=twinkling" width="720" alt="What this repo does" /></p>
 
 This repo has **two jobs** for **[Compass Ultra](https://www.compassultra.com)** only:
 
@@ -70,7 +70,7 @@ flowchart LR
 ```
 
 <p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
-<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=Chatbot%20(live%20now)&fontSize=22&fontColor=e6edf3" width="720" alt="Chatbot live now" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:070b14,100:12102a&height=50&section=header&text=Chatbot%20(live%20now)&fontSize=22&fontColor=e6edf3&animation=twinkling" width="720" alt="Chatbot live now" /></p>
 
 **Open the chatbot in your browser — no install, no localhost:**
 
@@ -114,7 +114,7 @@ AI_MODEL=gpt-4.1-mini
 </details>
 
 <p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
-<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=Automated%20AI%20DevOps%20Test&fontSize=22&fontColor=e6edf3" width="720" alt="Automated AI DevOps Test" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:070b14,100:12102a&height=50&section=header&text=Automated%20AI%20DevOps%20Test&fontSize=22&fontColor=e6edf3&animation=twinkling" width="720" alt="Automated AI DevOps Test" /></p>
 
 
 **In GitHub Actions (recommended):** the workflow in `.github/workflows/ai-devops-test.yml` runs daily at **6:00 UTC** and can be triggered manually from the Actions tab. Reports upload as workflow artifacts.
@@ -146,7 +146,7 @@ A local run writes:
 - `downloaded-runbook.pdf` if export succeeds
 
 <p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
-<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=Repo%20Structure&fontSize=22&fontColor=e6edf3" width="720" alt="Repo Structure" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:070b14,100:12102a&height=50&section=header&text=Repo%20Structure&fontSize=22&fontColor=e6edf3&animation=twinkling" width="720" alt="Repo Structure" /></p>
 
 
 ```text
@@ -165,7 +165,7 @@ A local run writes:
 ```
 
 <p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
-<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=Related%20repos&fontSize=22&fontColor=e6edf3" width="720" alt="Related repos" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:070b14,100:12102a&height=50&section=header&text=Related%20repos&fontSize=22&fontColor=e6edf3&animation=twinkling" width="720" alt="Related repos" /></p>
 
 
 | Repo | Role |
@@ -175,7 +175,7 @@ A local run writes:
 | [compass-ultra-backend](https://github.com/DaCameraGirl/compass-ultra-backend) | API + live AI for the product |
 
 <p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
-<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=Notes&fontSize=22&fontColor=e6edf3" width="720" alt="Notes" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:070b14,100:12102a&height=50&section=header&text=Notes&fontSize=22&fontColor=e6edf3&animation=twinkling" width="720" alt="Notes" /></p>
 
 
 This repo is intentionally separate from the main Compass Ultra product repo. It acts like an external AI DevOps operator: chat with it, run release checks, and use the output as launch-readiness evidence.
