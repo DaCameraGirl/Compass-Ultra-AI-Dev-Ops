@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="220" viewBox="0 0 920 220" role="img" aria-label="Compass Ultra AI DevOps">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="50%" stop-color="#12102a"/>
+      <stop offset="100%" stop-color="#0d1b33"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bc8cff"/>
+      <stop offset="100%" stop-color="#33d69f"/>
+    </linearGradient>
+  </defs>
+  <rect width="920" height="220" rx="18" fill="url(#bg)"/>
+  <rect x="1" y="1" width="918" height="218" rx="17" fill="none" stroke="rgba(188,140,255,0.28)" stroke-width="2"/>
+  <circle cx="96" cy="110" r="52" fill="rgba(188,140,255,0.08)" stroke="rgba(188,140,255,0.35)" stroke-width="2"/>
+  <rect x="72" y="86" width="48" height="36" rx="10" fill="none" stroke="url(#accent)" stroke-width="3"/>
+  <circle cx="84" cy="102" r="4" fill="#33d69f"/>
+  <circle cx="96" cy="102" r="4" fill="#33d69f"/>
+  <circle cx="108" cy="102" r="4" fill="#33d69f"/>
+  <path d="M78 118 Q96 128 114 118" fill="none" stroke="#bc8cff" stroke-width="2" stroke-linecap="round"/>
+  <text x="170" y="92" fill="#f8fbff" font-family="Segoe UI, system-ui, sans-serif" font-size="38" font-weight="800">Compass Ultra AI DevOps</text>
+  <text x="170" y="126" fill="#9db4d1" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="500">Release-readiness chatbot + automated Playwright checks</text>
+  <rect x="170" y="148" width="108" height="28" rx="14" fill="rgba(188,140,255,0.14)" stroke="rgba(188,140,255,0.45)"/>
+  <text x="224" y="167" fill="#bc8cff" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">CHATBOT</text>
+  <rect x="290" y="148" width="128" height="28" rx="14" fill="rgba(51,214,159,0.12)" stroke="rgba(51,214,159,0.4)"/>
+  <text x="354" y="167" fill="#33d69f" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">PLAYWRIGHT CI</text>
+  <rect x="430" y="148" width="156" height="28" rx="14" fill="rgba(88,166,255,0.12)" stroke="rgba(88,166,255,0.4)"/>
+  <text x="508" y="167" fill="#58a6ff" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">COMPASS ULTRA DEMO</text>
+  <text x="170" y="198" fill="#6f8199" font-family="Segoe UI, system-ui, sans-serif" font-size="12">www.compassultra.com/app?demo=true</text>
+</svg>
