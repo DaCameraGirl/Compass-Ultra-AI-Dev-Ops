@@ -15,7 +15,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/version-1.0.0-blue?style=flat-square" alt="Version 1.0.0" />
-  <img src="https://img.shields.io/badge/chatbot-local%20or%20OpenAI-bc8cff?style=flat-square" alt="Chatbot modes" />
+  <img src="https://img.shields.io/badge/chatbot-GitHub%20Pages%20live-bc8cff?style=flat-square" alt="Chatbot live on Pages" />
   <img src="https://img.shields.io/badge/tests-Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" alt="Playwright" />
   <img src="https://img.shields.io/badge/schedule-daily%206%3A00%20UTC-58a6ff?style=flat-square" alt="Daily CI" />
 </p>
@@ -45,8 +45,8 @@
 
 This repo has **two jobs** for **[Compass Ultra](https://www.compassultra.com)** only:
 
-1. **AI DevOps chatbot** — release-readiness Q&A (local assistant or OpenAI-compatible API).
-2. **Playwright release-loop test** — automated checks against the live demo app.
+1. **AI DevOps chatbot** — release-readiness Q&A at a public GitHub Pages URL (no install required).
+2. **Playwright release-loop test** — automated checks against the live demo app (runs in GitHub Actions daily).
 
 **Demo target:** [https://www.compassultra.com/app?demo=true](https://www.compassultra.com/app?demo=true)
 
@@ -70,21 +70,13 @@ flowchart LR
 ```
 
 <p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
-<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=Chatbot&fontSize=22&fontColor=e6edf3" width="720" alt="Chatbot" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=Chatbot%20(live%20now)&fontSize=22&fontColor=e6edf3" width="720" alt="Chatbot live now" /></p>
 
+**Open the chatbot in your browser — no install, no localhost:**
 
-Run the chatbot locally:
+**[https://dacameragirl.github.io/Compass-Ultra-AI-Dev-Ops/](https://dacameragirl.github.io/Compass-Ultra-AI-Dev-Ops/)**
 
-```bash
-npm install
-npm start
-```
-
-Then open:
-
-```text
-http://localhost:8787
-```
+It runs on GitHub Pages with a built-in release assistant. No API key, no `npm start`, no dev server.
 
 The chatbot can help with:
 
@@ -97,9 +89,19 @@ The chatbot can help with:
 - CI release gates
 - Launch readiness checklists
 
-By default it uses a local built-in release assistant, so it works without an API key.
+Every push to `main` redeploys the chatbot via `.github/workflows/deploy-pages.yml`.
 
-To connect it to an OpenAI-compatible provider, set these environment variables before running `npm start`:
+<details>
+<summary><strong>Optional: local dev server with OpenAI API</strong></summary>
+
+Only needed if you want to wire in an external AI provider while developing:
+
+```bash
+npm install
+npm start
+```
+
+Then open `http://localhost:8787` and set:
 
 ```bash
 AI_API_KEY=your_key
@@ -109,13 +111,15 @@ AI_MODEL=gpt-4.1-mini
 
 `OPENAI_API_KEY` also works if `AI_API_KEY` is not set.
 
-**Static GitHub Pages chat** (no server): [dacameragirl.github.io/Compass-Ultra-AI-Dev-Ops](https://dacameragirl.github.io/Compass-Ultra-AI-Dev-Ops/)
+</details>
 
 <p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
 <p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=Automated%20AI%20DevOps%20Test&fontSize=22&fontColor=e6edf3" width="720" alt="Automated AI DevOps Test" /></p>
 
 
-Run the external release-loop test locally:
+**In GitHub Actions (recommended):** the workflow in `.github/workflows/ai-devops-test.yml` runs daily at **6:00 UTC** and can be triggered manually from the Actions tab. Reports upload as workflow artifacts.
+
+**Locally (optional):**
 
 ```bash
 npm install
@@ -142,25 +146,21 @@ A local run writes:
 - `downloaded-runbook.pdf` if export succeeds
 
 <p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
-<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=GitHub%20Actions&fontSize=22&fontColor=e6edf3" width="720" alt="GitHub Actions" /></p>
-
-
-The workflow in `.github/workflows/ai-devops-test.yml` runs daily at **6:00 UTC** and can also be triggered manually from the Actions tab.
-
-<p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
 <p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=Repo%20Structure&fontSize=22&fontColor=e6edf3" width="720" alt="Repo Structure" /></p>
 
 
 ```text
 .
-├── .github/workflows/ai-devops-test.yml
-├── public/                 GitHub Pages static chatbot
+├── .github/workflows/
+│   ├── deploy-pages.yml    Publishes chatbot to GitHub Pages
+│   └── ai-devops-test.yml  Daily Playwright release-loop test
+├── public/                 GitHub Pages site (live URL)
 │   ├── app.js
 │   ├── index.html
 │   └── styles.css
 ├── tests/test-release-loop.js
 ├── package.json
-├── server.js               Local chatbot server
+├── server.js               Optional local dev server + API proxy
 └── README.md
 ```
 
